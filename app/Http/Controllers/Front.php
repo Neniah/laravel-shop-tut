@@ -21,9 +21,8 @@ class Front extends Controller
       return view('product_details', ['page' => 'products']);
     }
 
-    public function product_categories(){
-      return view('home', ['page' => 'home']);
-
+    public function product_categories($name){
+      return view('products', ['page' => 'products']);
     }
 
     public function product_brands(){
@@ -31,35 +30,35 @@ class Front extends Controller
     }
 
     public function blog(){
-      return 'blog page';
+      return view('blog', ['page' => 'blog']);
     }
 
     public function blog_post($id){
-      return '$id blog post page';
+      return view('blog_post', ['page' => 'blog']);
     }
 
     public function contact_us(){
-      return 'contact us page';
+      return view('contact_us', ['page' => 'contact_us']);
     }
 
     public function login(){
-      return 'login page';
+      return view('login', ['page' => 'home']);
     }
 
     public function logout(){
-      return 'logout page';
+      return view('login', ['page' => 'home']);
     }
 
     public function cart(){
-      return 'cart page';
+      return view('cart', ['page' => 'home']);
     }
 
     public function checkout(){
-      return 'checkout page';
+      return view('checkout', ['page' => 'home']);
     }
 
     public function search($query){
-      return "{$query} search page";
+      return view('products', ['page' => 'products']);
     }
 
 }
