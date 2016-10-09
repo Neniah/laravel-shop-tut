@@ -4,6 +4,7 @@
 
 @section('sidebar')
   @parent
+  <h2>{{ $name }}</h2>
   <p>
     This is appended to the master sidebar.
   </p>

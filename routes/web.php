@@ -14,4 +14,6 @@ Route::get('/cart', 'Front@cart');
 Route::get('/checkout', 'Front@cart');
 Route::get('/search/{query}', 'Front@search');
 
-Route::get('blade', function(){return view('page');});
+Route::get('blade', function(){
+  return view('page', ['name' => 'The Raven']);
+});
