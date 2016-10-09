@@ -13,3 +13,5 @@ Route::get('/logout', 'Front@logout');
 Route::get('/cart', 'Front@cart');
 Route::get('/checkout', 'Front@cart');
 Route::get('/search/{query}', 'Front@search');
+
+Route::get('blade', function(){return view('page')});

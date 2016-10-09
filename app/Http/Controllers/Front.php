@@ -58,7 +58,7 @@ class Front extends Controller
     }
 
     public function search($query){
-      return '$query search page';
+      return "{$query} search page";
     }
 
 }
