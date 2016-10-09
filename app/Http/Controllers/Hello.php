@@ -12,4 +12,8 @@ class Hello extends Controller
     public function index(){
       return 'Hello World from Hello Controller!!';
     }
+
+    public function show($name){
+      return view('hello', ['name' => $name]);
+    }
 }
