@@ -10,19 +10,20 @@ class Front extends Controller
 {
     //
     public function index(){
-      return 'index page';
+      return view('home', ['page' => 'home']);
     }
 
     public function product(){
-      return 'product page';
+      return view('products', ['page' => 'products']);
     }
 
     public function product_details($id){
-      return '$id product details page';
+      return view('product_details', ['page' => 'products']);
     }
 
     public function product_categories(){
-      return 'product categories page';
+      return view('home', ['page' => 'home']);
+
     }
 
     public function product_brands(){
