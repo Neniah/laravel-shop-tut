@@ -38,3 +38,16 @@ Route::get('/update', function(){
     echo $list->id.' '.$list->name.' ';
   }
 });
+
+
+Route::get('/delete', function() {
+    $category = App\Category::find(5);
+    $category->delete();
+
+    $data = $category->all(array('name','id'));
+
+    foreach ($data as $list) {
+        echo $list->id . ' ' . $list->name . '
+';
+    }
+});
