@@ -2,6 +2,6 @@
 
 @section('content')
 
-  @include('shared.sidebar')
+  @include('layouts.sidebar')
 
 @endsection

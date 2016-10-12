@@ -14,6 +14,11 @@ Route::get('/cart', 'Front@cart');
 Route::get('/checkout', 'Front@cart');
 Route::get('/search/{query}', 'Front@search');
 
+Route::get('/insert', function(){
+  App\Category::create(['name' => 'Music']);
+  return 'category added';
+});
+
 Route::get('blade', function(){
   return view('page', ['name' => 'The Raven']);
 });
