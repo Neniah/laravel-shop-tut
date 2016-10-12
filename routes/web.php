@@ -19,6 +19,11 @@ Route::get('/insert', function(){
   return 'category added';
 });
 
-Route::get('blade', function(){
-  return view('page', ['name' => 'The Raven']);
+Route::get('/read', function(){
+  $category = new App\Category();
+  $data = $category->all(['name', 'id']);
+
+  foreach($data as $list){
+    echo $list->id.' '.$list->name.' ';
+  }
 });
