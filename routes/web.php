@@ -27,3 +27,14 @@ Route::get('/read', function(){
     echo $list->id.' '.$list->name.' ';
   }
 });
+
+Route::get('/update', function(){
+  $category = new App\Category();
+  $category->name = 'HEAVEY METAL';
+  $category->save();
+
+  $data = $category->all(['name', 'id']);
+  foreach($data as $list){
+    echo $list->id.' '.$list->name.' ';
+  }
+});
