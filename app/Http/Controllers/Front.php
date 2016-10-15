@@ -47,7 +47,15 @@ class Front extends Controller
     }
 
     public function product_details($id){
-      return view('product_details', ['page' => 'products']);
+      $product = Product::find($id);
+      return view('product_details', [
+        'page' => 'products',
+        'title' => 'Welcome',
+        'description' => '',
+        'brands' => $this->brands,
+        'categories' => $this->categories,
+        'products' => $this->products
+      ]);
     }
 
     public function product_categories($name){
