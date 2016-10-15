@@ -12,6 +12,12 @@ use Product;
 class Front extends Controller
 {
     //
+    var $brands;
+    var $categories;
+    var $products;
+    var $title;
+    var $description;
+    
     public function index(){
       return view('home', ['page' => 'home']);
     }
