@@ -36,7 +36,14 @@ class Front extends Controller
     }
 
     public function product(){
-      return view('products', ['page' => 'products']);
+      return view('products', [
+        'title' => 'Welcome',
+        'description' => '',
+        'brands' => $this->brands,
+        'categories' => $this->categories,
+        'products' => $this->products,
+        'page' => 'products'
+      ]);
     }
 
     public function product_details($id){
