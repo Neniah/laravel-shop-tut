@@ -25,7 +25,14 @@ class Front extends Controller
     }
 
     public function index(){
-      return view('home', ['page' => 'home']);
+      return view('home', [
+        'title' => 'Welcome',
+        'description' => '',
+        'page' => 'home',
+        'brands' => $this->brands,
+        'categories' => $this->categories,
+        'products' => $this->products
+      ]);
     }
 
     public function product(){
