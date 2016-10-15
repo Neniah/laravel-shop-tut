@@ -17,7 +17,13 @@ class Front extends Controller
     var $products;
     var $title;
     var $description;
-    
+
+    public function __construct(){
+      $this->brands = Brand::all(['name']);
+      $this->categories = Categories::all(['name']);
+      $this->products = Product::all(['id', 'name', 'price']);
+    }
+
     public function index(){
       return view('home', ['page' => 'home']);
     }
