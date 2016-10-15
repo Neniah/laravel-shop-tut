@@ -81,11 +81,25 @@ class Front extends Controller
     }
 
     public function blog(){
-      return view('blog', ['page' => 'blog']);
+      return view('blog', [
+        'title' => 'Welcome',
+        'description' => '',
+        'page' => 'blog',
+        'brands' => $this->brands,
+        'categories' => $this->categories,
+        'products' => $this->products
+      ]);
     }
 
     public function blog_post($id){
-      return view('blog_post', ['page' => 'blog']);
+      return view('blog_post', [
+        'title' => 'Welcome',
+        'description' => '',
+        'page' => 'blog',
+        'brands' => $this->brands,
+        'categories' => $this->categories,
+        'products' => $this->products
+      ]);
     }
 
     public function contact_us(){
