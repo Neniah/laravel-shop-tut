@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Brand;
+use Category;
+use Product;
 
 class Front extends Controller
 {
