@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use Brand;
-use Category;
-use Product;
+use App\Brand;
+use App\Category;
+use App\Product;
 
 class Front extends Controller
 {
@@ -20,7 +20,7 @@ class Front extends Controller
 
     public function __construct(){
       $this->brands = Brand::all(['name']);
-      $this->categories = Categories::all(['name']);
+      $this->categories = Category::all(['name']);
       $this->products = Product::all(['id', 'name', 'price']);
     }
 
