@@ -10,6 +10,9 @@
         "gloudemans/shoppingcart": "~1.3",
         "laravelcollective/html": "5.3.*"
     },
+    "dependencies": {
+        "bootstrap-sass": "^3.0.0"
+    },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
