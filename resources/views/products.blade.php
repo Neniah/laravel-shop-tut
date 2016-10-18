@@ -3,7 +3,7 @@
 @section('content')
 <section id="advertisement">
     <div class="container">
-        <img src="{{asset('images/shop/advertisement.jpg')}}" alt="" />
+        <img src="{{asset('images/shop/advertisement.png')}}" alt="" />
     </div>
 </section>
 
@@ -24,7 +24,7 @@
                         <div class="product-image-wrapper">
                             <div class="single-products">
                                 <div class="productinfo text-center">
-                                    <img src="{{asset('images/shop/product9.jpg')}}" alt="" />
+                                    <img src="{{asset('images/shop/product9.jpg')}}" alt="" width="200px" />
                                     <h2>${{$product->price}}</h2>
                                     <p>{{$product->name}}</p>
                                     <a href="{{url('cart')}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
