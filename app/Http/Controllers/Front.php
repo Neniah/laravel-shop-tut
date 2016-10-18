@@ -123,6 +123,13 @@ class Front extends Controller
               $product = Product::find($product_id);
               Cart::add(array('id' => $product_id, 'name' => $product->name, 'qty' => 1, 'price' => $product->price));
           }
+      //increment the quantity
+      if(Request::get('product_id') && (Request::get('increment')) == 1){
+        $rowId = Cart::search(['id' => Request::get('product_id')]);
+        $item = Cart::get($rowId[0]);
+
+        Cart::update($rowId[0], $item->qty +1);
+      }
 
       $cart = Cart::content();
 
