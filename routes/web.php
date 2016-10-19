@@ -24,3 +24,5 @@ Route::get('auth/logout', 'Front@logout');
 
 // Registration routes...
 Route::post('/register', 'Front@register');
+
+Route::get('/checkout', ['middleware' => 'auth', 'uses' => 'Front@checkout']);
