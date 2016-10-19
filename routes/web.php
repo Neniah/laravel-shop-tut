@@ -16,3 +16,8 @@ Route::get('/search/{query}', 'Front@search');
 
 // Create a products
 Route::post('/products/store', 'Front@product_store');
+
+// Authentication routes...
+Route::get('auth/login', 'Front@login');
+Route::post('auth/login', 'Front@authenticate');
+Route::get('auth/logout', 'Front@logout');
