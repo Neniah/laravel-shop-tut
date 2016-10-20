@@ -135,7 +135,8 @@ class Front extends Controller
     }
 
     public function logout(){
-      return view('login', ['page' => 'home']);
+      Auth::logout();
+      return Redirect::away('login');
     }
 
     public function cart(){
