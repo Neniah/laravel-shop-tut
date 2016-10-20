@@ -115,6 +115,17 @@ class Front extends Controller
       return view('login', ['page' => 'home']);
     }
 
+    public function register(){
+      if(Request::isMethod('post')){
+        User::create([
+          'name' => Request::get('name'),
+          'email' => Request::get('email'),
+          'password' => bcrypt(Request::get('password')),
+        ]);
+      }
+      return Redirect::away('login');
+    }
+
     public function logout(){
       return view('login', ['page' => 'home']);
     }
