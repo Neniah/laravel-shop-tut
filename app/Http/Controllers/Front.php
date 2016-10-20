@@ -126,6 +126,14 @@ class Front extends Controller
       return Redirect::away('login');
     }
 
+    public function authenticate(){
+      if(Auth::atempt(['email' => Request::get('email'), 'password' => Request::get('password')])){
+        return redirect()->intended('checkout');
+      } else{
+        return view('login', ['title' => 'Welcome', 'description' => '', 'page' => 'home']);
+      }
+    }
+
     public function logout(){
       return view('login', ['page' => 'home']);
     }
