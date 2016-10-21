@@ -36,3 +36,12 @@ Route::get('/api/v1/products/{id}', ['middleware' => 'auth.basic', function($id 
   }
   return Response::json(['error' => false, 'products' => $products, 'status_code' => 200]);
 }]);
+
+Route::get('/api/v1/categories/{id}', ['middleware' => 'auth.basic', function($id = null){
+  if($id == null){
+    $categories = App\Category::all(['id', 'name']);
+  } else{
+    $categories = App\Categoriy::find($id, ['id', 'name']);
+  }
+  return Response::json(['error' => false, 'user' => $categories, 'status_code' => 200]);
+}]);
