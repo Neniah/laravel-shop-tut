@@ -26,3 +26,13 @@ Route::get('auth/logout', 'Front@logout');
 Route::post('/register', 'Front@register');
 
 Route::get('/checkout', ['middleware' => 'auth', 'uses' => 'Front@checkout']);
+
+// API routes...
+Route::get('/api/v1/products/{id}', ['middleware' => 'auth.basic', function($id = null){
+  if($id = null){
+    $products = App\Product::all(['id', 'name', 'price']);
+  } else{
+    $products = App\Product::find($id, ['id', 'name', 'price']);
+  }
+  return Response::json(['error' => false, 'products' => $products, 'status_code' => 200]);
+}]);
