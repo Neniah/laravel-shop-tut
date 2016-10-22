@@ -32,6 +32,6 @@ class BlogCategories extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('blog_categories');
     }
 }
