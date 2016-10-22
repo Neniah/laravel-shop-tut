@@ -18,9 +18,9 @@ class BlogCategories extends Migration
           $table->string('category')->unique();
           $table->timestamps();
 
-          DB::table('blog_categories')->insert(['category' => "WOMEN"]);
-          DB::table('blog_categories')->insert(['category' => "MEN"]);
-          DB::table('blog_categories')->insert(['category' => "KIDS"]);
+        //  DB::table('blog_categories')->insert(['category' => "WOMEN"]);
+        //  DB::table('blog_categories')->insert(['category' => "MEN"]);
+        //  DB::table('blog_categories')->insert(['category' => "KIDS"]);
 
         });
     }

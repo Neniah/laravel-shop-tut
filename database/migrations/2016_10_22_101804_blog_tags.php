@@ -18,8 +18,8 @@ class BlogTags extends Migration
           $table->string('tag')->unique();
           $table->timestamps();
 
-          DB::table('blog_tags')->insert(['tag' => 'Pink']);
-          DB::table('blog_tags')->insert(['tag' => 'T-Shirt']);
+        //  DB::table('blog_tags')->insert(['tag' => 'Pink']);
+        //  DB::table('blog_tags')->insert(['tag' => 'T-Shirt']);
 
         });
     }
