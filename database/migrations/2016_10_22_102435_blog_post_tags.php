@@ -13,7 +13,12 @@ class BlogPostTags extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('blog_post_tags', function(Blueprint $table){
+          $table->increments('id');
+          $table->unsignedInteger('post_id');
+          $table->unsignedInteger('tag_id');
+          $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class BlogPostTags extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('blog_post_tags');
     }
 }
